@@ -1,6 +1,5 @@
 import { useSpeciesData, getOwnMovePool } from "../../data/useSpeciesData";
 import { TypeBadge } from "../Shared/TypeBadge";
-import { TYPE_PALETTES } from "../../data/types";
 
 export function TeamMemberCard({ member, onUpdate, onRemove }) {
   const { species, byName, allMoveNames } = useSpeciesData();
@@ -24,18 +23,17 @@ export function TeamMemberCard({ member, onUpdate, onRemove }) {
 
   return (
     <div className="member-card">
-      <div
-        className="member-card__sprite-slot"
-        style={{
-          backgroundColor: speciesEntry
-            ? `#${TYPE_PALETTES[speciesEntry.elemental_type]?.[1] ?? "eee"}`
-            : undefined,
-        }}
-        aria-hidden="true"
-      >
-        <span className="placeholder-note">
-          {speciesEntry ? `${speciesEntry.name} sprite` : "sprite"}
-        </span>
+      <div className="member-card__sprite-slot" aria-hidden="true">
+        {speciesEntry ? (
+          <img
+            className="member-card__sprite"
+            src={`/sprites/${speciesEntry.name}.png`}
+            alt=""
+            onError={(e) => { e.currentTarget.style.display = "none"; }}
+          />
+        ) : (
+          <span className="placeholder-note">sprite</span>
+        )}
       </div>
 
       <div className="member-card__fields">

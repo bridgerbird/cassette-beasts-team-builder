@@ -25,10 +25,10 @@ export function SelfTargetTable({ members }) {
 
   return (
     <section className="panel">
-      <h3>Self Target Possibilities</h3>
+      <h3>Buff Combo Possibilities</h3>
       <p className="placeholder-note">
-        Buff combos where one teammate's move type lands a positive effect on
-        another teammate's own type -- deliberate "friendly fire" for a free buff.
+        One teammate attacks its ally to land a positive effect on
+        the ally - deliberate "friendly fire" for a free buff.
       </p>
 
       {typedMembers.length < 2 ? (
@@ -51,7 +51,7 @@ export function SelfTargetTable({ members }) {
                 <td>{labelFor(c.attackerId)} <TypeBadge type={c.attackerType} /></td>
                 <td>{labelFor(c.defenderId)} <TypeBadge type={c.defenderType} /></td>
                 <td>{c.message}</td>
-                <td>{c.statuses.map(([name, turns]) => `${name} (${turns}t)`).join(", ")}</td>
+                <td>{c.statuses.map(([name, turns]) => `${name} (x${turns})`).join(", ")}</td>
               </tr>
             ))}
           </tbody>

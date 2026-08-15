@@ -118,7 +118,16 @@ export function DexBrowser() {
             {filtered.map((s) => (
               <tr key={s.name}>
                 <td className="dex-table__sprite-col">
-                  <div className="dex-sprite-placeholder" aria-hidden="true" />
+                  <img
+                    className="dex-sprite"
+                    src={`/sprites/${s.name}.png`}
+                    alt=""
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                      e.currentTarget.nextSibling.style.display = "block";
+                    }}
+                  />
+                  <div className="dex-sprite-placeholder" style={{ display: "none" }} aria-hidden="true" />
                 </td>
                 <td>
                   <strong>{s.name}</strong>
