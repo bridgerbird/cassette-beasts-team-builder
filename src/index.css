@@ -349,3 +349,7 @@ body {
   padding: 0.35rem 0.5rem;
   border-bottom: 1px solid #eee;
 }
+
+.self-target-table__row--transmutation {
+  background: #fff9c4;
+}

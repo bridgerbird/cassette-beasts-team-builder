@@ -174,7 +174,7 @@ export function findSelfBuffCombos(members) {
     for (const defender of members) {
       if (attacker.id === defender.id) continue;
       const chem = getChemistry(attacker.elementalType, defender.elementalType);
-      if (chem && chem.hint === "POSITIVE") {
+      if (chem && chem.hint != "NEGATIVE") {
         combos.push({
           attackerId: attacker.id,
           defenderId: defender.id,

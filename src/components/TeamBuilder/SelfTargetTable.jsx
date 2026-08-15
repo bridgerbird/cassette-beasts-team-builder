@@ -46,14 +46,17 @@ export function SelfTargetTable({ members }) {
             </tr>
           </thead>
           <tbody>
-            {combos.map((c, i) => (
-              <tr key={i}>
-                <td>{labelFor(c.attackerId)} <TypeBadge type={c.attackerType} /></td>
-                <td>{labelFor(c.defenderId)} <TypeBadge type={c.defenderType} /></td>
-                <td>{c.message}</td>
-                <td>{c.statuses.map(([name, turns]) => `${name} (x${turns})`).join(", ")}</td>
-              </tr>
-            ))}
+            {combos.map((c, i) => {
+              const isTransmutation = c.hint === "TRANSMUTATION";
+              return (
+                <tr key={i} className={isTransmutation ? "self-target-table__row--transmutation" : undefined}>
+                  <td>{labelFor(c.attackerId)} <TypeBadge type={c.attackerType} /></td>
+                  <td>{labelFor(c.defenderId)} <TypeBadge type={c.defenderType} /></td>
+                  <td>{c.message}{isTransmutation ? " (TRANSMUTATION)" : ""}</td>
+                  <td>{c.statuses.map(([name, turns]) => `${name} (x${turns})`).join(", ")}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       )}
