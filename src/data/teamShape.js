@@ -8,9 +8,9 @@ export const MAX_TEAM_SIZE = 6;
 export function createEmptyMember() {
   return {
     id: crypto.randomUUID(),
-    speciesId: null, // will reference an entry in the fetched species data
+    speciesName: null, // references a species by name in the loaded dataset
     nickname: "",
-    moves: [], // array of { moveId, requiresSticker: boolean }
+    moveNames: [], // array of move name strings, up to the species' move_slots
   };
 }
 

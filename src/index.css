@@ -138,3 +138,154 @@ body {
   font-family: monospace;
   font-size: 0.85rem;
 }
+
+/* Type badges */
+.type-badge {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.type-badge--empty {
+  color: #999;
+  font-style: italic;
+}
+
+/* Dex Browser */
+.dex-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.dex-filters input {
+  flex: 1;
+}
+
+.dex-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.dex-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.dex-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.dex-card__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #444;
+  margin-top: 0.4rem;
+}
+
+.dex-card__evo {
+  margin-top: 0.4rem;
+}
+
+/* Team member stats grid */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.15rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* Moves */
+.move-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.move-chip {
+  background: #eef2f6;
+  border-radius: 6px;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.move-chip--sticker {
+  background: #fdf1e0;
+  border: 1px solid #e8c48a;
+}
+
+.move-chip__sticker-tag {
+  color: #a06a1c;
+  font-size: 0.7rem;
+}
+
+.move-chip__remove {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #888;
+}
+
+.move-picker summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.move-picker__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.move-option {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.move-option--sticker {
+  border-color: #e8c48a;
+  background: #fffaf0;
+}
+
+.move-option:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Self Target table */
+.self-target-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.self-target-table th,
+.self-target-table td {
+  text-align: left;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid #eee;
+}
