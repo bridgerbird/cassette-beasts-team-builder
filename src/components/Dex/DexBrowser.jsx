@@ -120,7 +120,7 @@ export function DexBrowser() {
                 <td className="dex-table__sprite-col">
                   <img
                     className="dex-sprite"
-                    src={`/sprites/${s.name}.png`}
+                    src={`${import.meta.env.BASE_URL}sprites/${s.name}.png`}
                     alt=""
                     onError={(e) => {
                       e.currentTarget.style.display = "none";

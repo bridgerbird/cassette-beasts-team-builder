@@ -9,7 +9,7 @@ export function TypeBadge({ type }) {
     <span className="type-badge">
       <img
         className="type-badge__icon"
-        src={`/icons/types/${type}.png`}
+        src={`${import.meta.env.BASE_URL}icons/types/${type}.png`}
         alt=""
         aria-hidden="true"
         onError={(e) => { e.currentTarget.style.display = "none"; }}

@@ -27,7 +27,7 @@ export function TeamMemberCard({ member, onUpdate, onRemove }) {
         {speciesEntry ? (
           <img
             className="member-card__sprite"
-            src={`/sprites/${speciesEntry.name}.png`}
+            src={`${import.meta.env.BASE_URL}sprites/${speciesEntry.name}.png`}
             alt=""
             onError={(e) => { e.currentTarget.style.display = "none"; }}
           />
