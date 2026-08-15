@@ -19,7 +19,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <h1>Cassette Beasts Team Planner</h1>
+        <h1>Cassette Beasts Team Builder</h1>
       </header>
 
       <Tabs tabs={TABS} activeTab={activeTab} onChange={setActiveTab} />
