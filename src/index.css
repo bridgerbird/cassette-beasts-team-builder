@@ -1,0 +1,140 @@
+/* Skeleton-stage stylesheet: structural only. Real visual design
+   (palette, type, layout polish) comes in a later pass. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f4f4f4;
+  color: #1a1a1a;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.app__header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button--active {
+  border-bottom-color: #333;
+  font-weight: 600;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.placeholder-note {
+  color: #888;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.roster__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roster__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.roster__add-slot {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  min-height: 120px;
+  color: #888;
+}
+
+.member-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.member-card__sprite-slot {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.9rem;
+}
+
+.field__label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.member-card__remove {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #b33;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.team-notes {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.export-import__actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.export-import__code {
+  width: 100%;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
