@@ -30,3 +30,4 @@ Raise Arms (sticker)
 4) make the url update as you make changes
 5) Show Possible Fusion sprites in 'Fusion Explorer' tab
 6) possibly implement a fusion stat calculator as well???
+7) Clean up AI text in README, and code comments
